@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+    <script>
+        function checkall() {
+            var countcheck = document.getElementsByClassName("checkall").length;
+            var check = document.getElementsByClassName("checkall");
+            var uncheck = document.getElementsByClassName("uncheck");
+            for (var i = 0; i < countcheck; i++) {
+                check[i].checked = true;
+            }
+            if (uncheck[0].checked == true) {
+                uncheck[0].checked = false;
+            }
+        }
+        function uncheck() {
+            var countcheck = document.getElementsByClassName("checkall").length;
+            var check = document.getElementsByClassName("checkall");
+            var uncheck = document.getElementsByClassName("uncheck");
+            for (var i = 0; i < countcheck; i++) {
+                check[i].checked = false;
+            }
+            if (uncheck[0].checked == false) {
+                uncheck[0].checked = true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <table id="tab" border="2px solid black" cellspacing="0px">
+            <tr>
+                <th>Name</th>
+                <th>Check ALL<input type="checkbox" class="checkall" onclick="checkall()"></th>
+                <th>UnCheck ALL<input type="checkbox" class="uncheck" onclick="uncheck()"></th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td colspan="2"><input type="checkbox" class="checkall"></td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td colspan="2"><input type="checkbox" class="checkall"></td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td colspan="2"><input type="checkbox" class="checkall"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
