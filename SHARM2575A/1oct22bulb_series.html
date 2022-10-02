@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+    <script>
+        function turn_on() {
+            setInterval(start, 3000);
+            function start() {
+                var Bulb1 = document.getElementById("blb1");
+                Bulb1.src = "images/orange_bulb.jfif";
+                setTimeout(on2, 500);
+                function on2() {
+                    var Bulb2 = document.getElementById("blb2");
+                    Bulb2.src = "images/blue_bulb.jfif";
+                    var Bulb1 = document.getElementById("blb1");
+                    Bulb1.src = "images/turn_off_bulb.jfif";
+                }
+                setTimeout(on3, 1000);
+                function on3() {
+                    var Bulb3 = document.getElementById("blb3");
+                    Bulb3.src = "images/red_bulb.jpg";
+                    var Bulb2 = document.getElementById("blb2");
+                    Bulb2.src = "images/turn_off_bulb.jfif";
+                }
+                setTimeout(on4, 1500);
+                function on4() {
+                    var Bulb4 = document.getElementById("blb4");
+                    Bulb4.src = "images/green_bulb.jpg";
+                    var Bulb3 = document.getElementById("blb3");
+                    Bulb3.src = "images/turn_off_bulb.jfif";
+                }
+                setTimeout(on5, 2000);
+                function on5() {
+                    var Bulb5 = document.getElementById("blb5");
+                    Bulb5.src = "images/pink_bulb.jfif";
+                    var Bulb4 = document.getElementById("blb4");
+                    Bulb4.src = "images/turn_off_bulb.jfif";
+                }
+                setTimeout(on6, 2500);
+                function on6() {
+                    var Bulb1 = document.getElementById("blb1");
+                    Bulb1.src = "images/turn_off_bulb.jfif";
+                    var Bulb2 = document.getElementById("blb2");
+                    Bulb2.src = "images/turn_off_bulb.jfif";
+                    var Bulb3 = document.getElementById("blb3");
+                    Bulb3.src = "images/turn_off_bulb.jfif";
+                    var Bulb4 = document.getElementById("blb4");
+                    Bulb4.src = "images/turn_off_bulb.jfif";
+                    var Bulb5 = document.getElementById("blb5");
+                    Bulb5.src = "images/turn_off_bulb.jfif";
+                }
+            }
+        }
+        function turn_off() {
+            var Bulb1 = document.getElementById("blb1");
+            Bulb1.src = "images/turn_off_bulb.jfif";
+            var Bulb2 = document.getElementById("blb2");
+            Bulb2.src = "images/turn_off_bulb.jfif";
+            var Bulb3 = document.getElementById("blb3");
+            Bulb3.src = "images/turn_off_bulb.jfif";
+            var Bulb4 = document.getElementById("blb4");
+            Bulb4.src = "images/turn_off_bulb.jfif";
+            var Bulb5 = document.getElementById("blb5");
+            Bulb5.src = "images/turn_off_bulb.jfif";
+        }
+    </script>
+</head>
+
+<body>
+    <!-- <img src="C:\js\images\blue_bulb.jfif"> -->
+    <img src="images\turn_off_bulb.jfif" id="blb1">
+    <img src="images\turn_off_bulb.jfif" id="blb2">
+    <img src="images\turn_off_bulb.jfif" id="blb3">
+    <img src="images\turn_off_bulb.jfif" id="blb4">
+    <img src="images\turn_off_bulb.jfif" id="blb5">
+    <button onclick="turn_on()">On</button>
+    <button onclick="turn_off()">Off</button>
+</body>
+
+</html>
