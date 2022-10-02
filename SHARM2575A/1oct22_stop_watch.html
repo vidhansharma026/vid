@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function start_clock() {
+            var a = 5;
+            a--;
+            document.getElementById("min").innerHTML = a;
+            var b = 60;
+            document.getElementById("sec").innerHTML = b;
+            setInterval(stat, 60000);
+            function stat() {
+                if (a >= 1) {
+                    a--;
+                    document.getElementById("min").innerHTML = a;
+                }
+            }
+            setInterval(sec, 1000);
+            function sec() {
+                if (b >= 1) {
+                    b--;
+                    document.getElementById("sec").innerHTML = b;
+                }
+                if (a != 0 && b == 0) {
+                    b = 60;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p><span id="min">05</span>:<span id="sec">00</span></p>
+    <button id="timer" onclick="start_clock()">start timer</button>
+</body>
+
+</html>
